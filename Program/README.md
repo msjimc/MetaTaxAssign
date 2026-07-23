@@ -79,4 +79,4 @@ And finally, select the 'Keep anyway' option (Figure 10) and the download will s
 
 Figure 5
 
-Repeat the process for the circularMT.dll and circularMT.runtimeconfig.json file.
+
