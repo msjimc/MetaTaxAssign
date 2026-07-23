@@ -1,6 +1,6 @@
 # Python, Bash and R scripts
 
-This folder contains a number of Python and BASH scripts that may be helpful in the analysis of eDNA. The BASH scripts focus on performing BLAST searches, while the Python scripts can be used to create data that may be imported by ___Taxonomic_NCBI___.
+This folder contains a number of Python and BASH scripts that may be helpful in the analysis of eDNA. The BASH scripts focus on performing BLAST searches, while the Python scripts can be used to create data that may be imported by ___MetaTaxAssign___.
 
 ## R scripts
 
@@ -191,7 +191,7 @@ The output of a blastn search consists of
 
 - ## b_CombineBLASTHitFiles.sh
 
-This bash script will read all the *out.txt files created by [__slurm_BlastSequencesTenHits.sh and sge_BlastSequencesTenHits.sh__](#slurm_blastsequencestenhitssh-and-sge_blastsequencestenhitssh) and create a tab-delimited text files that contain the BLAST hit results in a format that __Taxonomic_NCBI__ can use. 
+This bash script will read all the *out.txt files created by [__slurm_BlastSequencesTenHits.sh and sge_BlastSequencesTenHits.sh__](#slurm_blastsequencestenhitssh-and-sge_blastsequencestenhitssh) and create a tab-delimited text files that contain the BLAST hit results in a format that __MetaTaxAssign__ can use. 
 
 The output file consists containsthe columns shown in the table below.
 
@@ -221,11 +221,11 @@ Where:
 
 ---
 
-## ___Taxonomic_NCBI___ related scripts 
+## ___MetaTaxAssign___ related scripts 
 
 - ## Taxonomy files
 
-While ___Taxonomic_NCBI___ annotates the read-count matrix with taxonomic data derived from the NCBI Taxonomy site, it can also append taxonomic descriptions from other data sources; however, it is often not in the required format. The  following Python scripts extract taxonomic data from a range of sources and export it as a suitably formatted text file.
+While ___MetaTaxAssign___ annotates the read-count matrix with taxonomic data derived from the NCBI Taxonomy site, it can also append taxonomic descriptions from other data sources; however, it is often not in the required format. The  following Python scripts extract taxonomic data from a range of sources and export it as a suitably formatted text file.
 
 The desired format is for each species' taxonomic ranking to be listed from the root at the start of a line to the species name at the end. Each group is separated by a _Tab_ character. Ideally, each species contains the same ranking; however, sources such as SILVA have different groups for major groups. For example, Bacteria is different from Eukaryota. This may not be a problem, as most amplicon eDNA experiments are limited to specific subsets of species, but metagenomic eDNA may contain DNA from all types of organisms.
 

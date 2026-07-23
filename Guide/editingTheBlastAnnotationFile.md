@@ -56,7 +56,7 @@ Once the appropriate column has been selected, pressing the ___Create___ button 
 
 ### Switch the taxonomic data for unexpected species with that of expected related species.
 
-___Important point:___ all the other functions of ___Taxonomy_NCBI___ are comparatively lax in the required file structure; however, this function expects the species name to be in the last column of each row and the taxonomic data is in the same format/length as that derived from ___Taxonomy_NCBI___'s annotation of a BLAST hit file with NCBI taxonomy data.
+___Important point:___ all the other functions of ___MetaTaxAssign___ are comparatively lax in the required file structure; however, this function expects the species name to be in the last column of each row and the taxonomic data is in the same format/length as that derived from ___MetaTaxAssign___'s annotation of a BLAST hit file with NCBI taxonomy data.
 
 For annotation in an annotated BLAST hits file to be edited, ___MetaTaxAssign___ must hold the NCBI taxonomy data which can be imported as described [here](README.md/#importing-and-saving-the-ncbi-taxonomic-data). Once imported, the ___Switch___  button in the ___Processing a BLAST hit file___ panel (Figure 1) will be activated. Pressing the ___Switch___ button will open the ___Switch taxonomic lineage___ window (Figure 4).
 
@@ -66,11 +66,11 @@ Figure 4.
 
 ---
 
-Pressing the ___Select___ button will prompt you to select the text file of the paired unexpected and expected species names as described [above](#switch-taxonomic-data-linked-to-a-sequence). As each name pair is imported, __Taxonomy_NCBI___ uses the name of the expected species to search the NCBI taxonomy data to create its taxonomic lineage text, which is then linked to the unexpected species' name.
+Pressing the ___Select___ button will prompt you to select the text file of the paired unexpected and expected species names as described [above](#switch-taxonomic-data-linked-to-a-sequence). As each name pair is imported, __MetaTaxAssign___ uses the name of the expected species to search the NCBI taxonomy data to create its taxonomic lineage text, which is then linked to the unexpected species' name.
 
-Once imported paired-name  file has been processed, the __Create___ button will become active, allowing you to select the annotated BLAST hit file to be processed. As ___Taxonomy_NCBI___ reads this file it reads the text in the last column of the file and uses it to search the list of alternative taxonomy lineages created when reading the paired name file.  If a match is found, its taxonomic data is replaced by the taxonomic data for the expected species. 
+Once imported paired-name  file has been processed, the __Create___ button will become active, allowing you to select the annotated BLAST hit file to be processed. As ___MetaTaxAssign___ reads this file it reads the text in the last column of the file and uses it to search the list of alternative taxonomy lineages created when reading the paired name file.  If a match is found, its taxonomic data is replaced by the taxonomic data for the expected species. 
 
-Once completed, ___Taxonomy_NCBI___ will create a new file named after the BLAST hit file to which __"\_names\_switched"__ has been appended. This file as the same structure as the original file except a new column named __Changed__ was appended to the data. This column is used to indicate how the data in each row was processed, as follows:
+Once completed, ___MetaTaxAssign___ will create a new file named after the BLAST hit file to which __"\_names\_switched"__ has been appended. This file as the same structure as the original file except a new column named __Changed__ was appended to the data. This column is used to indicate how the data in each row was processed, as follows:
 
 - If the species name was not in the unexpected name list.    
     - The column contains the text __"No change"__.
@@ -83,7 +83,7 @@ The text contains the name of the unexpected species followed by __": not found"
 
 ## Filtering the annotated BLAST hit file with multiple hits per sequence
 
-If the BLAST hit data was created using the SGE or SLURM scripts in the [Bash and Python scripts](../Bash_and_Python_scripts) folder, each sequence will be linked to up to 20 hits and so each sequence may be annotated a number of different ways. For instance, the same sequence could be linked to _Acanthurus achilles_, _Acanthurus bariene_, _Acanthurus triostegus_, _Acanthurus moloanus_ and _Acanthurus sp._ It could be possible to filter the hits based on which name appears first in the BLAST hit file; however, this is unlikely to be ideal. Therefore, ___Taxonomy_NCBI_ allows you to filter the hits by the quality of the hit or by the presence of the hit's species name in a file of names to include or exclude. This filtering is initiated by pressing the ___Filter___ button in the in the ___Processing a BLAST hit file___ panel (Figure 1). This will open the ___Filter the annotated BLAST hit file___ window (Figure 5). 
+If the BLAST hit data was created using the SGE or SLURM scripts in the [Bash and Python scripts](../Bash_and_Python_scripts) folder, each sequence will be linked to up to 20 hits and so each sequence may be annotated a number of different ways. For instance, the same sequence could be linked to _Acanthurus achilles_, _Acanthurus bariene_, _Acanthurus triostegus_, _Acanthurus moloanus_ and _Acanthurus sp._ It could be possible to filter the hits based on which name appears first in the BLAST hit file; however, this is unlikely to be ideal. Therefore, ___MetaTaxAssign_ allows you to filter the hits by the quality of the hit or by the presence of the hit's species name in a file of names to include or exclude. This filtering is initiated by pressing the ___Filter___ button in the in the ___Processing a BLAST hit file___ panel (Figure 1). This will open the ___Filter the annotated BLAST hit file___ window (Figure 5). 
 
 ![](images/figure37.jpg)
 

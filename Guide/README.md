@@ -1,4 +1,4 @@
-# Annotating read-count matrices with taxonomic data with ___Taxonomy_NCBI___
+# Annotating read-count matrices with taxonomic data with ___MetaTaxAssign___
 
 
 ## User Guide
@@ -14,19 +14,19 @@
 ## Prerequisites 
 
 ### NCBI taxonomy data
-___Taxonomy_NCBI___ annotates files using taxonomic data downloaded from the NCBI taxonomy [webpage](https://www.ncbi.nlm.nih.gov/taxonomy). This webpage contains a link to the ***Taxonomy FTP*** page, which contains the current taxonomic data compressed by various algorithms. Download one of the taxdump files (taxdmp.zip, taxdump.tar.Z or taxdump.tar.gz) and decompress it. 
+___MetaTaxAssign___ annotates files using taxonomic data downloaded from the NCBI taxonomy [webpage](https://www.ncbi.nlm.nih.gov/taxonomy). This webpage contains a link to the ***Taxonomy FTP*** page, which contains the current taxonomic data compressed by various algorithms. Download one of the taxdump files (taxdmp.zip, taxdump.tar.Z or taxdump.tar.gz) and decompress it. 
 
-___Taxonomy_NCBI___ only requires the names.dmp and nodes.dmp files; the remaining files can be deleted to save space. These files are regularly updated, so this process should be performed frequently, but the date/version of the data should be noted if you plan to publish the results.
+___MetaTaxAssign___ only requires the names.dmp and nodes.dmp files; the remaining files can be deleted to save space. These files are regularly updated, so this process should be performed frequently, but the date/version of the data should be noted if you plan to publish the results.
 
 ### Read-counts matrix file
-There are a number of programs that can generate read-count matrices that link sequences to read counts across a series of sample files. ___Taxonomy_NCBI___ can process read-count matrix files where the rows and columns represent samples and sequences respectively, as well as files where:
+There are a number of programs that can generate read-count matrices that link sequences to read counts across a series of sample files. ___MetaTaxAssign___ can process read-count matrix files where the rows and columns represent samples and sequences respectively, as well as files where:
 - rows = samples and columns = sequences, or 
 - rows = sequences and columns = samples.
 
-However, it expects the first row and first column to contain the data's IDs. ___Taxonomy_NCBI___ treats all numbers as decimals, and so the read-count values may be integers or decimal values.
+However, it expects the first row and first column to contain the data's IDs. ___MetaTaxAssign___ treats all numbers as decimals, and so the read-count values may be integers or decimal values.
 
 ### BLAST hit file
-The BLAST‑hit file may use almost any character‑delimited format, but Taxonomy_NCBI has been tested primarily with blastn output generated using the -outfmt 5 option, for example:
+The BLAST‑hit file may use almost any character‑delimited format, but MetaTaxAssign has been tested primarily with blastn output generated using the -outfmt 5 option, for example:
 
 > blastn -query inputFile.fasta -db databaseName -dust no -outfmt 5 -num_alignments 10 -num_threads 2 > results.xml"
 
@@ -55,11 +55,11 @@ Figure 1: The ID (_qseqid_) value of 4 links to the 4th sequence data column in 
 
 ### Running on non-Windows PCs
 
-___Taxonomy_NCBI___ is written in C#, which is geared towards Windows computers, but can be used on macOS or Linux/BSD computers with Intel or AMD processors using Wine, as described [here](https://github.com/msjimc/RunningWindowsProgramsOnLinux).
+___MetaTaxAssign___ is written in C#, which is geared towards Windows computers, but can be used on macOS or Linux/BSD computers with Intel or AMD processors using Wine, as described [here](https://github.com/msjimc/RunningWindowsProgramsOnLinux).
 
 ## The user interface
 
-Figure 2 shows the ___Taxonomy_NCBI___ user interface which consists of five regions: 
+Figure 2 shows the ___MetaTaxAssign___ user interface which consists of five regions: 
 - [___Import taxonomic data___](#importing-and-saving-the-ncbi-taxonomic-data) 
 - [___Processing a BLAST hit file___](#processing-a-blast-hit-file)  
 - [___Combine annotation file read-count matrix___](#combining-the-annotated-blast-hit-file-and-the-read-count-matrix-file) 

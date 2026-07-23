@@ -30,7 +30,7 @@ The taxonomic data is written to the right-hand text area, which does not word-w
 
 The whole line can be read using the horizontal scroll bar below the text area.
 
-These functions are particularly useful when annotating species in an Excel file. Copy the column of interest from Excel, paste it into Taxonomy_NCBI, and run the search. If prompted, do not ignore empty lines. When the search is complete, copy the results from Taxonomy_NCBI back into Excel.
+These functions are particularly useful when annotating species in an Excel file. Copy the column of interest from Excel, paste it into MetaTaxAssign, and run the search. If prompted, do not ignore empty lines. When the search is complete, copy the results from MetaTaxAssign back into Excel.
 
 
 ## User Guide

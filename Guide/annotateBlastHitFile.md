@@ -11,7 +11,7 @@
 
 # Annotating BLAST hit files with NCBI taxonomic data
 
-The annotation of a BLAST hit file is performed by pressing the ___Annotate___ button in the ___Automated analysis___ panel. Pressing this button prompts you to select a BLAST hit file. If the ___Process a folder of text files___ option is selected, ___Taxonomy_NCBI___ will process all the text files in the same folder, creating a single annotated BLAST hit file. When this option is used, ___Taxonomy_NCBI___ expects all the text files in the folder to be BLAST hit files containing sequences linked to a single read-counts matrix file. Once the input data has been selected, the ___Blast hit file annotation___ window will open, allowing you to specify the location of the species name in the description of sequences identified by BLAST as homologous to your amplicon sequence (Figure 1).
+The annotation of a BLAST hit file is performed by pressing the ___Annotate___ button in the ___Automated analysis___ panel. Pressing this button prompts you to select a BLAST hit file. If the ___Process a folder of text files___ option is selected, ___MetaTaxAssign___ will process all the text files in the same folder, creating a single annotated BLAST hit file. When this option is used, ___MetaTaxAssign___ expects all the text files in the folder to be BLAST hit files containing sequences linked to a single read-counts matrix file. Once the input data has been selected, the ___Blast hit file annotation___ window will open, allowing you to specify the location of the species name in the description of sequences identified by BLAST as homologous to your amplicon sequence (Figure 1).
 
 ![](images/figure4.jpg)
 
@@ -79,14 +79,14 @@ Figure 5b
 
 <hr />
 
-If the sequences were annotated against the BOLD data set, instruct ___Taxonomy_NCBI___ to ignore fields containing the word "_None_" (red line in Figure 5b) by ticking the ___Ignore "None" items___ option (blue box in Figure 5b). This will remove the "None" fields from the subsequent taxonomic term searches (green line in the lower text box in Figure 5b).  
+If the sequences were annotated against the BOLD data set, instruct ___MetaTaxAssign___ to ignore fields containing the word "_None_" (red line in Figure 5b) by ticking the ___Ignore "None" items___ option (blue box in Figure 5b). This will remove the "None" fields from the subsequent taxonomic term searches (green line in the lower text box in Figure 5b).  
 
 Finally, pressing the ___Accept___ button will process the entire BLAST hit file and create a new file with the same name as the BLAST hit file, but with ***_annotated*** appended to its name. In the new file, the field from which the search term is derived is removed, and the taxonomic string is appended to the end of the line after a text delimiter.
 
 Since not all entries contain all the taxonomic subdivisions, ___MetaTaxAssign____ pads missing fields using the previous taxonomic rank prefixed by a '.' character, for example, a search for ***Gyrodinium*** returns the name of a genus, but not a species name; Consequently, the taxonomic string ended with ***Gyrodinium***\<tab>***.Gyrodinium***. The term ***.Gyrodinium*** is substituted for a species name with the '.' character indicating the substitution. A value of ***Eucalanidae***\<tab>***.Eucalanidae***\<tab>***..Eucalanidae*** indicates that the two taxonomic rankings following ***Eucalanidae*** are absent.
 
 
-When working with GenBank accession sequence description, they may start with a classifier such as _PREDICTED:_, _TPA\_asm:_, or _MAG:_. This text may then be followed by a suitable taxonomic term that would be missed because of the prefix. By default, ___Taxonomy_NCBI___ removes any the first word of a description is it ends with a _':'_. For example, _PREDICTED:_ will be ignored, but _PREDICTED_ will not. Unchecking the __Remove NCBI classifier__ will stop this behaviour (see Figures 6a and 6b). 
+When working with GenBank accession sequence description, they may start with a classifier such as _PREDICTED:_, _TPA\_asm:_, or _MAG:_. This text may then be followed by a suitable taxonomic term that would be missed because of the prefix. By default, ___MetaTaxAssign___ removes any the first word of a description is it ends with a _':'_. For example, _PREDICTED:_ will be ignored, but _PREDICTED_ will not. Unchecking the __Remove NCBI classifier__ will stop this behaviour (see Figures 6a and 6b). 
 
 ![](images/figureNCBI1a.jpg)
 

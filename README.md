@@ -1,4 +1,4 @@
-#  ```Taxonomic NCBI```
+#  ___MetaTaxAssign___
 
 #### Contents
 - [Introduction](#Introduction)
@@ -11,7 +11,7 @@
 
 <img align="right" src="Guide/images/introFigure.jpg">
 
-```Taxonomic NCBI``` is designed to annotate a read count file with the sequence's species of origin initially using NCBI's GenBank and taxonomic data. A generic workflow is given below, but it should be noted that as ```Taxonomic NCBI``` processes plain text files, there is not set method to create the read count file or identify a sequence's origin as long as the file have a consistent format and contain the required data.  
+___MetaTaxAssign___ is designed to annotate a read count file with the sequence's species of origin initially using NCBI's GenBank and taxonomic data. A generic workflow is given below, but it should be noted that as ___MetaTaxAssign___ processes plain text files, there is preferred a set method to create the read count file or identify a sequence's origin as long as the files have a consistent format and contain the required data.  
 
 ___A generic workflow:___
 
@@ -23,22 +23,22 @@ ___A generic workflow:___
 - The annotated reads count file can then be filtered and aggregated with respect to:
     - If the  species linked to a sequence is not present in the sampled habitat, but a close relative is, the species data can be switched.
     - The sequence's BLAST hit results: percent identity and or e score, etc.
-    - A sequence's total read count. 
+    - A sequence's total read count.
     - Sequences can be flagged or filtered if the sequence's taxonomic data (i.e., species name) is present in a 2nd file.
-    - Read count data can be aggregated based on whether sequences share the same taxonomic grouping i.e. same species or family name. 
+    - Read count data can be aggregated based on whether sequences share the same taxonomic grouping i.e. same species or family name.
 
-```Taxonomic NCBI``` is written to be flexible and so can process sequence descriptors from a range of sources such as the SILVA data set or standard GenBank sequence description. The only requirement for automated analysis is that the the descriptions have a consist format structure.
+___MetaTaxAssign___ is written to be flexible and so can process sequence descriptors from a range of sources such as the SILVA data set or standard GenBank sequence description. The only requirement for automated analysis is that the descriptions have a consist format structure.
 
-As well as allowing the automated annotation of a file, ```Taxonomic NCBI``` will also allow you to perform manual searchers using either names (common English or Latin) or the species' NCBI taxonomy ID number. 
+As well as allowing the automated annotation of a file, ___MetaTaxAssign___ will also allow you to perform manual searches using either names (common English or Latin) or the species' NCBI taxonomy ID number. 
 
 
 ## Guide
 
-The ```Taxonomic NCBI``` guide is [here](Guide/README.md).
+The ___MetaTaxAssign___ guide is [here](Guide/README.md).
 
 ## Useful scripts
 
-A folder of  useful scripts for the formatting data that could be imported in to ___Taxonomy_NCBI___ as well as scripts that automate the searching of a BLAST database with OTU/AVS sequences from a DADA2 read count file is [here.](Bash_Python_R_scripts)
+A folder of  useful scripts for the formatting data that could be imported in to ___MetaTaxAssign___ as well as scripts that automate the searching of a BLAST database with OTU/AVS sequences from a DADA2 read count file is [here](Bash_Python_R_scripts).
 
 ## Download
 
@@ -46,5 +46,5 @@ The compiled program can be downloaded from [here](Program/).
 
 ## Running on macOS, Linux or BSD computers
 
-```Taxonomic NCBI``` can run on arrange of non-Windows PCs that have an Intel or AMD processor as described [here](https://github.com/msjimc/RunningWindowsProgramsOnLinux).
+___MetaTaxAssign___ can run on a range of non-Windows PCs that have an Intel or AMD processor as described [here](https://github.com/msjimc/RunningWindowsProgramsOnLinux).
 
